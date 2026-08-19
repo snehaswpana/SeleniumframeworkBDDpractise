@@ -2,6 +2,7 @@ package driver;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 import utils.ConfigReader;
 
@@ -16,6 +17,13 @@ public class DriverManager {
         if (browser.equalsIgnoreCase("chrome")) {
 
             WebDriver webDriver = new ChromeDriver();
+
+            driver.set(webDriver);
+        }
+
+        if (browser.equalsIgnoreCase("edge")) {
+
+            WebDriver webDriver = new EdgeDriver();
 
             driver.set(webDriver);
         }
